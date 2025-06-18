@@ -9,12 +9,14 @@ import Shop from './pages/shop/Shop.jsx';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />
+    element: <App />,
+    children: [
+      { path: 'home', element: <Home /> },
+      { path: 'shop', element: <Shop /> },
+    ],
   },
-  {
-    path: 'shop',
-    element: <Shop />
-  }
+  //OUTLETS HERE from (app?????)
+  //DEFAULT OUTLET is home
 ]);
 
 createRoot(document.getElementById('root')).render(
