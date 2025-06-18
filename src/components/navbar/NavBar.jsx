@@ -5,7 +5,7 @@ export default function NavBar () {
     return (
         <>
             <div className="navBar">
-                <Link to ="home">Home</Link>
+                <Link to ="/">Home</Link>
                 <Link to ="shop">Shop</Link>
             </div>
         </>
