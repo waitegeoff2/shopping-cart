@@ -6,6 +6,7 @@ export default function Shop() {
     const [products, setProducts] = useState([]);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [cart, setCart] = useState([]);
 
     useEffect(() => {
     fetch("https://fakestoreapi.com/products?limit=15", { mode: "cors" })
@@ -34,7 +35,7 @@ export default function Shop() {
     return (
         <>
             <div>hello from shop</div>
-            <DisplayCards products={products} setProducts={setProducts} />
+            <DisplayCards products={products} setProducts={setProducts} cart={cart} setCart={setCart} />
         </>
     )
 }
