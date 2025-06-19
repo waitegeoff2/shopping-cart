@@ -1,3 +1,4 @@
+import DisplayCards from "../../components/displayCards/DisplayCards";
 import "./Shop.css"
 import { useState, useEffect } from "react"
 
@@ -17,9 +18,13 @@ export default function Shop() {
       .then((response) => setProducts(response))
       .catch((error) => setError(error))
       .finally(() => setLoading(false));
-  }, []);
+    }, []);
 
-  console.log(products)
+    // function handleAddToCart(index) {
+
+    // }
+
+    console.log(products)
 
 
   //ADD ERROR AND LOADING LOGIC
@@ -29,6 +34,7 @@ export default function Shop() {
     return (
         <>
             <div>hello from shop</div>
+            <DisplayCards products={products} setProducts={setProducts} />
         </>
     )
 }
