@@ -1,6 +1,10 @@
 import './DisplayCards.css'
+import { useState } from 'react';
 
 export default function DisplayCards({products, setProducts, cart, setCart}) {
+
+    //overwrite this each time the input is changed
+    const [productNum, setProductNum] = useState(1);
 
     function addToCart(index) {
         const addedProduct = products[index];
@@ -10,9 +14,14 @@ export default function DisplayCards({products, setProducts, cart, setCart}) {
         setCart(newCart)
     }
 
-    function handleInputChange(e){
+    function addOne() {
+        //tie it to the index???
+    }
+
+    function minusOne() {
 
     }
+
 
     console.log(cart)
 
@@ -23,10 +32,17 @@ export default function DisplayCards({products, setProducts, cart, setCart}) {
                 <div className="productCard">
                     <div className="productInfo">
                         <img className="productImage" src={product.image} />
-                        <p>{product.title}</p>
+                        <h4>{product.title}</h4>
+                        <p>${product.price}</p>
                     </div>
                     <div className="productCartControls">
-                        <button onClick={()=>addToCart(index)}>Add To Cart</button>
+                        <form className="addToCartInputs" onSubmit={e => e.preventDefault()}>
+                            <button className='incrementBtn'>+</button>
+                            <input type='text' />
+                            <button className='incrementBtn'>-</button>
+                            <button onClick={()=>addToCart(index)}>Add to Cart</button>
+                        </form>
+                        {/* this needs to be a FORM with a submit button */}
                     </div>
                 </div>
             ))}
