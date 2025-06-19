@@ -14,10 +14,12 @@ export default function Shop() {
         }
         return response.json();
       })
-      .then((response) => console.log(response))
+      .then((response) => setProducts(response))
       .catch((error) => setError(error))
       .finally(() => setLoading(false));
   }, []);
+
+  console.log(products)
 
 
   //ADD ERROR AND LOADING LOGIC
