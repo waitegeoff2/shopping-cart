@@ -33,6 +33,8 @@ export default function Shop() {
     return (
         <>
             <div>hello from shop</div>
+            {/* MAP FUNCTION HERE
+            <Card props /> */}
             <DisplayCards products={products} setProducts={setProducts} cart={cart} setCart={setCart} />
         </>
     )

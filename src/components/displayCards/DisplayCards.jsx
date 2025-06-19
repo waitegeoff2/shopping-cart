@@ -3,10 +3,10 @@ import { useState } from 'react';
 
 export default function DisplayCards({products, setProducts, cart, setCart}) {
 
-    //overwrite this each time the input is changed
-    const [productNum, setProductNum] = useState(1);
+    //do i need this???
+    // const [productNum, setProductNum] = useState(1);
 
-    function addToCart(index) {
+    function addToCart(index, quantity) {
         const addedProduct = products[index];
         console.log(addedProduct) 
         const newCart=[...cart]
@@ -20,6 +20,10 @@ export default function DisplayCards({products, setProducts, cart, setCart}) {
 
     function minusOne() {
 
+    }
+
+    const handleChange = (e) => {
+       e.target.value
     }
 
 
@@ -38,9 +42,9 @@ export default function DisplayCards({products, setProducts, cart, setCart}) {
                     <div className="productCartControls">
                         <form className="addToCartInputs" onSubmit={e => e.preventDefault()}>
                             <button className='incrementBtn'>+</button>
-                            <input type='text' />
+                            <input type='number' min='1' max='10' value='1' onChange={handleChange} />
                             <button className='incrementBtn'>-</button>
-                            <button onClick={()=>addToCart(index)}>Add to Cart</button>
+                            <button type='submit' onClick={()=>addToCart(index, quantity)}>Add to Cart</button>
                         </form>
                         {/* this needs to be a FORM with a submit button */}
                     </div>
