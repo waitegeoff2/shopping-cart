@@ -10,3 +10,27 @@
     width: 200px;
     padding: 4px;
 }
+
+.quantityInputs {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100px;
+    padding: 3px;
+}
+
+.quantitySelect {
+    border: none;
+    height: 20px;
+}
+
+.incrementBtns {
+
+}
+
+.increment {
+   width: 15px; 
+   border: none;
+   background-color: white;
+}

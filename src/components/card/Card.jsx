@@ -49,11 +49,11 @@ export default function Card({ product, cart, setCart }) {
             </div>
             <div className="productCartControls">
                 <form className="addToCartInputs" onSubmit={e => e.preventDefault()}>
-                    <input type='number' min='1' max='10' value={productNum} onChange={handleChange} />
-                        {/* value='1' onChange={handleChange} */}
-                    <div className="incrementBtns">
-                        <button onClick={addOne}>+</button>
-                        <button onClick={minusOne}>-</button>
+                    <div className="quantityInputs">
+                        <button className='increment' onClick={minusOne}>-</button>
+                        <input className='quantitySelect' type='number' min='1' max='10' value={productNum} onChange={handleChange} />
+                            {/* value='1' onChange={handleChange} */}
+                        <button className='increment' onClick={addOne}>+</button>
                     </div>
                     <button type='submit' onClick={()=>addToCart(product)}>Add to Cart</button>
                 </form>
