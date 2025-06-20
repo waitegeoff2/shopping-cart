@@ -1,14 +1,30 @@
+.productCard {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid black;
+    box-shadow: 3px 3px 3px grey;
+    border-radius: 5px;
+    height: 300px;
+    width: 200px;
+    padding: 4px;
+}
+
 .productImage {
     height: 120px;
     width: 120px;
 }
 
-.productCard {
-    border: 1px solid black;
-    border-radius: 5px;
-    height: 300px;
-    width: 200px;
-    padding: 4px;
+.productInfo {
+    display: flex;  
+    flex-direction: column;
+    
+}
+
+.productImage {
+    display: flex; 
+    align-self: center;
 }
 
 .quantityInputs {
