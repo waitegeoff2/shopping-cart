@@ -1,4 +1,5 @@
 import { useState } from "react"
+import './Card.css'
 //MAKE EACH CARD HERE????
 //so that you are making new handleFunctions for EACH CARD, 
 //in the current way, you are mapping them all but they all share the same states
@@ -28,9 +29,9 @@ export default function Card({ product, cart, setCart }) {
 
     // }
 
-    // const handleChange = (e) => {
-    //    e.target.value
-    // }
+    const handleChange = (e) => {
+       setProductNum(e.target.value)
+    }
 
 
     return (
@@ -43,7 +44,7 @@ export default function Card({ product, cart, setCart }) {
             <div className="productCartControls">
                 <form className="addToCartInputs" onSubmit={e => e.preventDefault()}>
                     <button className='incrementBtn'>+</button>
-                    <input type='number' min='1' max='10' />
+                    <input type='number' min='1' max='10' value={productNum} onChange={handleChange} />
                         {/* value='1' onChange={handleChange} */}
                     <button className='incrementBtn'>-</button>
                     <button type='submit' onClick={()=>addToCart(product)}>Add to Cart</button>

@@ -1,4 +1,3 @@
-import DisplayCards from "../../components/displayCards/DisplayCards";
 import "./Shop.css"
 import { useState, useEffect } from "react"
 import Card from "../../components/card/Card";
@@ -34,15 +33,17 @@ export default function Shop() {
     return (
         <>
             {/* MAP HERE */}
-            {products.map((product, index) =>(
-                <Card 
-                product={product} 
-                key={product.id}
-                index={index}
-                cart={cart} 
-                setCart={setCart} 
-                />
-            ))}
+            <div className="cardGrid">
+                {products.map((product, index) =>(
+                    <Card 
+                    product={product} 
+                    key={product.id}
+                    index={index}
+                    cart={cart} 
+                    setCart={setCart} 
+                    />
+                ))}
+            </div>
         </>
     )
 }
