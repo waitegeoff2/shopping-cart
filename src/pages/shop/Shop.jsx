@@ -1,6 +1,7 @@
 import DisplayCards from "../../components/displayCards/DisplayCards";
 import "./Shop.css"
 import { useState, useEffect } from "react"
+import Card from "../../components/card/Card";
 
 export default function Shop() {
     const [products, setProducts] = useState([]);
@@ -32,10 +33,16 @@ export default function Shop() {
 
     return (
         <>
-            <div>hello from shop</div>
-            {/* MAP FUNCTION HERE
-            <Card props /> */}
-            <DisplayCards products={products} setProducts={setProducts} cart={cart} setCart={setCart} />
+            {/* MAP HERE */}
+            {products.map((product, index) =>(
+                <Card 
+                product={product} 
+                key={product.id}
+                index={index}
+                cart={cart} 
+                setCart={setCart} 
+                />
+            ))}
         </>
     )
 }

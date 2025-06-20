@@ -1,9 +1,37 @@
+import { useState } from "react"
 //MAKE EACH CARD HERE????
 //so that you are making new handleFunctions for EACH CARD, 
 //in the current way, you are mapping them all but they all share the same states
 
-export default function Card() {
+export default function Card({ product, cart, setCart }) {
+    
     //takes the props and returns a card
+    
+    const [productNum, setProductNum] = useState(1);
+
+
+    function addToCart(product) {
+        //add quantity logic
+        const addedProduct = product;
+        const newCart=[...cart]
+        newCart.push(addedProduct)
+        setCart(newCart)
+    }
+
+    console.log(cart)
+
+    // function addOne() {
+    //     //tie it to the index???
+    // }
+
+    // function minusOne() {
+
+    // }
+
+    // const handleChange = (e) => {
+    //    e.target.value
+    // }
+
 
     return (
         <div className="productCard">
@@ -15,9 +43,10 @@ export default function Card() {
             <div className="productCartControls">
                 <form className="addToCartInputs" onSubmit={e => e.preventDefault()}>
                     <button className='incrementBtn'>+</button>
-                    <input type='number' min='1' max='10' value='1' onChange={handleChange} />
+                    <input type='number' min='1' max='10' />
+                        {/* value='1' onChange={handleChange} */}
                     <button className='incrementBtn'>-</button>
-                    <button type='submit' onClick={()=>addToCart(index, input.value)}>Add to Cart</button>
+                    <button type='submit' onClick={()=>addToCart(product)}>Add to Cart</button>
                 </form>
                 {/* this needs to be a FORM with a submit button */}
             </div>
