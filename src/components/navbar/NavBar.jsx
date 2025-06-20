@@ -2,7 +2,7 @@ import './NavBar.css'
 import { Link } from 'react-router-dom'
 import shoppingcart from '../../assets/cart-variant.svg'
 
-export default function NavBar () {
+export default function NavBar ({ cart }) {
     return (
         <>
             <div className="navBar">

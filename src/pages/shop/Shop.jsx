@@ -1,12 +1,14 @@
 import "./Shop.css"
 import { useState, useEffect } from "react"
 import Card from "../../components/card/Card";
+import { useOutletContext } from 'react-router-dom';
+
 
 export default function Shop() {
     const [products, setProducts] = useState([]);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
-    const [cart, setCart] = useState([]);
+    const [cart, setCart] = useOutletContext();
 
     useEffect(() => {
     fetch("https://fakestoreapi.com/products?limit=15", { mode: "cors" })
