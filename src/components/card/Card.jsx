@@ -13,10 +13,13 @@ export default function Card({ product, cart, setCart }) {
 
     function addToCart(product) {
         //add quantity logic
-        const addedProduct = product;
+        const addedProducts = [];
+        for(let i=1; i<=productNum; i++) {
+            addedProducts.push(product)
+        }
         const newCart=[...cart]
-        newCart.push(addedProduct)
-        setCart(newCart)
+        const fullCart = newCart.concat(addedProducts)
+        setCart(fullCart)
     }
 
     console.log(cart)
@@ -46,7 +49,6 @@ export default function Card({ product, cart, setCart }) {
             </div>
             <div className="productCartControls">
                 <form className="addToCartInputs" onSubmit={e => e.preventDefault()}>
-                    
                     <input type='number' min='1' max='10' value={productNum} onChange={handleChange} />
                         {/* value='1' onChange={handleChange} */}
                     <div className="incrementBtns">
