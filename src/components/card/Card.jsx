@@ -21,13 +21,16 @@ export default function Card({ product, cart, setCart }) {
 
     console.log(cart)
 
-    // function addOne() {
-    //     //tie it to the index???
-    // }
+    function addOne() {
+        const newProductTotal = productNum + 1;
+        setProductNum(newProductTotal)
+        //tie it to the index???
+    }
 
-    // function minusOne() {
-
-    // }
+    function minusOne() {
+        const newProductTotal = productNum - 1;
+        setProductNum(newProductTotal)
+    }
 
     const handleChange = (e) => {
        setProductNum(e.target.value)
@@ -43,10 +46,13 @@ export default function Card({ product, cart, setCart }) {
             </div>
             <div className="productCartControls">
                 <form className="addToCartInputs" onSubmit={e => e.preventDefault()}>
-                    <button className='incrementBtn'>+</button>
+                    
                     <input type='number' min='1' max='10' value={productNum} onChange={handleChange} />
                         {/* value='1' onChange={handleChange} */}
-                    <button className='incrementBtn'>-</button>
+                    <div className="incrementBtns">
+                        <button onClick={addOne}>+</button>
+                        <button onClick={minusOne}>-</button>
+                    </div>
                     <button type='submit' onClick={()=>addToCart(product)}>Add to Cart</button>
                 </form>
                 {/* this needs to be a FORM with a submit button */}
