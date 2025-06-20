@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 import shoppingcart from '../../assets/cart-variant.svg'
 
 export default function NavBar ({ cart }) {
+
+    const numItems = cart.length;
+
     return (
         <>
             <div className="navBar">
@@ -11,7 +14,12 @@ export default function NavBar ({ cart }) {
                     <Link to ="shop">Shop</Link>
                 </div>
                 <div className="navCart">
-                    <img className="icon" src={shoppingcart} />
+                    <div className="cartIcon">
+                        <Link to='cart'><img className="icon" src={shoppingcart} /></Link>
+                        <div className="cartNumbers">
+                            <div className="cartNumber">{numItems}</div>
+                        </div>
+                    </div>
                 </div>
                 {/* CART */}
                 {/* CHECKOUT */}
