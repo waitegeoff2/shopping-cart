@@ -45,7 +45,7 @@ export default function Card({ product, cart, setCart }) {
             <div className="productInfo">
                 <img className="productImage" src={product.image} />
                 <h4>{product.title}</h4>
-                <p>${product.price}</p>
+                <p className="productPrice">Price: ${product.price}</p>
             </div>
             <div className="productCartControls">
                 <form className="addToCartInputs" onSubmit={e => e.preventDefault()}>
@@ -55,7 +55,7 @@ export default function Card({ product, cart, setCart }) {
                             {/* value='1' onChange={handleChange} */}
                         <button className='increment' onClick={addOne}>+</button>
                     </div>
-                    <button type='submit' onClick={()=>addToCart(product)}>Add to Cart</button>
+                    <button className="addToCartBtn" type='submit' onClick={()=>addToCart(product)}>Add to Cart</button>
                 </form>
                 {/* this needs to be a FORM with a submit button */}
             </div>

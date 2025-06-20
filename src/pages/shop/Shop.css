@@ -6,3 +6,12 @@
     background-color: rgb(210, 255, 255);
     z-index: 1;
 }
+
+.loading {
+    display: flex;
+    font-weight: bold;
+    align-self: center;
+    justify-self: center;
+    font-size: 30px;
+    padding: 20px;
+}

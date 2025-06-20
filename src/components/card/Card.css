@@ -19,12 +19,22 @@
 .productInfo {
     display: flex;  
     flex-direction: column;
-    
+    gap: 3px;
 }
 
 .productImage {
     display: flex; 
     align-self: center;
+}
+
+.productPrice {
+    font-size: 15px;
+}
+
+.addToCartInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
 }
 
 .quantityInputs {
@@ -34,11 +44,21 @@
     border-radius: 5px;
     width: 100px;
     padding: 3px;
+    
 }
 
 .quantitySelect {
     border: none;
     height: 20px;
+}
+
+.addToCartBtn {
+    background-color: blueviolet;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    padding: 2px;
+    
 }
 
 .incrementBtns {

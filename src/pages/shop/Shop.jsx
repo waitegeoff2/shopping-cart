@@ -29,12 +29,11 @@ export default function Shop() {
 
     console.log(products)
   //ADD ERROR AND LOADING LOGIC
-    if (loading) return <p>Loading...</p>;
+    if (loading) return <p className="loading">Loading...</p>;
     if (error) return <p>A network error was encountered</p>;
 
     return (
         <>
-            {/* MAP HERE */}
             <div className="cardGrid">
                 {products.map((product, index) =>(
                     <Card 
