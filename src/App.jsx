@@ -9,10 +9,6 @@ function App() {
   const [cart, setCart] = useState([]);
   const[isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  function findTotal(cart) {
-    
-  }
-
   const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
   };

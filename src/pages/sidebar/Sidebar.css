@@ -15,6 +15,7 @@
     .sidebar-contents {
         display: flex;
         flex-direction: column;
+        min-width: 380px;
         padding-left: 10px;
 
     }
@@ -34,7 +35,7 @@
     }
 
     .sidebar.open {
-      width: 300px; /* Adjust desired width */
+      width: 400px; /* Adjust desired width */
     }
 
     .sidebar ul {
