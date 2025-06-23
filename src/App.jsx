@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} cart={cart} />
+      <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} cart={cart} setCart={setCart} />
       <NavBar cart={cart} toggleSidebar={toggleSidebar} />
       <Outlet context={[cart, setCart]} />
     </>

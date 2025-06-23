@@ -21,8 +21,6 @@ export default function NavBar ({ cart, toggleSidebar }) {
                         </div>
                     </div>
                 </div>
-                {/* CART */}
-                {/* CHECKOUT */}
             </div>
         </>
     )

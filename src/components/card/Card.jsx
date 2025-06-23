@@ -10,17 +10,16 @@ export default function Card({ product, cart, setCart }) {
 
 
     function addToCart(product) {
-        //add quantity logic
         const addedProducts = [];
+        //adds multiple products depending on selection
         for(let i=1; i<=productNum; i++) {
             addedProducts.push(product)
         }
+        //adds products to cart
         const newCart=[...cart]
         const fullCart = newCart.concat(addedProducts)
         setCart(fullCart)
     }
-
-    console.log(cart)
 
     function addOne() {
         const newProductTotal = productNum + 1;

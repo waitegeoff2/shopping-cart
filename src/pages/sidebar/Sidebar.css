@@ -54,3 +54,17 @@
     .sidebar li:hover {
       background-color: #ddd;
     }
+
+    .cart-list {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 5px;
+    }
+
+    .delete-btn {
+        height: 18px;
+        font-weight: bold;
+        background-color: rgb(180, 230, 235);
+        border: 1px solid;
+        border-radius: 3px;
+    }

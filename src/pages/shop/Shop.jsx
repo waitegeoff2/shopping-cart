@@ -23,12 +23,6 @@ export default function Shop() {
       .finally(() => setLoading(false));
     }, []);
 
-    // function handleAddToCart(index) {
-
-    // }
-
-    console.log(products)
-  //ADD ERROR AND LOADING LOGIC
     if (loading) return <p className="loading">Loading...</p>;
     if (error) return <p>A network error was encountered</p>;
 
