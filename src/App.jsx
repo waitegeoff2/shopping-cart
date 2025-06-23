@@ -9,6 +9,10 @@ function App() {
   const [cart, setCart] = useState([]);
   const[isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+  function findTotal(cart) {
+    
+  }
+
   const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
   };
@@ -16,7 +20,7 @@ function App() {
   return (
     <>
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} cart={cart} />
-      <NavBar cart={cart} isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} toggleSidebar={toggleSidebar} />
+      <NavBar cart={cart} toggleSidebar={toggleSidebar} />
       <Outlet context={[cart, setCart]} />
     </>
   )

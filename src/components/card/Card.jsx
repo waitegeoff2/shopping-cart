@@ -6,8 +6,6 @@ import './Card.css'
 
 export default function Card({ product, cart, setCart }) {
     
-    //takes the props and returns a card
-    
     const [productNum, setProductNum] = useState(1);
 
 
@@ -27,7 +25,6 @@ export default function Card({ product, cart, setCart }) {
     function addOne() {
         const newProductTotal = productNum + 1;
         setProductNum(newProductTotal)
-        //tie it to the index???
     }
 
     function minusOne() {
@@ -52,12 +49,10 @@ export default function Card({ product, cart, setCart }) {
                     <div className="quantityInputs">
                         <button className='increment' onClick={minusOne}>-</button>
                         <input className='quantitySelect' type='number' min='1' max='10' value={productNum} onChange={handleChange} />
-                            {/* value='1' onChange={handleChange} */}
                         <button className='increment' onClick={addOne}>+</button>
                     </div>
                     <button className="addToCartBtn" type='submit' onClick={()=>addToCart(product)}>Add to Cart</button>
                 </form>
-                {/* this needs to be a FORM with a submit button */}
             </div>
         </div>
     )

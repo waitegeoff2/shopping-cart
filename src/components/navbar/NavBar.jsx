@@ -2,7 +2,7 @@ import './NavBar.css'
 import { Link } from 'react-router-dom'
 import shoppingcart from '../../assets/cart-variant.svg'
 
-export default function NavBar ({ cart, isSidebarOpen, setIsSidebarOpen, toggleSidebar }) {
+export default function NavBar ({ cart, toggleSidebar }) {
 
     const numItems = cart.length;
 
