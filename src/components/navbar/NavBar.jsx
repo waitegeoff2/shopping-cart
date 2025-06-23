@@ -15,7 +15,7 @@ export default function NavBar ({ cart, isSidebarOpen, setIsSidebarOpen, toggleS
                 </div>
                 <div className="navCart">
                     <div className="cartIcon">
-                        <Link to='cart'><img className="icon" onClick={toggleSidebar} src={shoppingcart} /></Link>
+                        <img className="icon" onClick={toggleSidebar} src={shoppingcart} />
                         <div className="cartNumbers">
                             <div className="cartNumber">{numItems}</div>
                         </div>

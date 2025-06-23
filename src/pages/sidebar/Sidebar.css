@@ -4,15 +4,37 @@
       top: 0;
       right: 0;
       height: 100%;
-      background-color: #f0f0f0;
+      background-color: #c3ebff;
+      border-left: 1px solid black;
       overflow-x: hidden;
       transition: 0.5s; /* Smooth transition for opening/closing */
-      padding-top: 60px; /* Adjust as needed */
+      padding-top: 20px; /* Adjust as needed */
       z-index: 11; /* Ensure it's on top of other content */
     }
 
+    .sidebar-contents {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+
+    }
+
+    .close-cart {
+        display: flex;
+        justify-self: end;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        width: 100px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: rgb(91, 152, 160);
+    }
+
     .sidebar.open {
-      width: 250px; /* Adjust desired width */
+      width: 300px; /* Adjust desired width */
     }
 
     .sidebar ul {

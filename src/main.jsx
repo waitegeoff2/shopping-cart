@@ -5,7 +5,6 @@ import './index.css'
 import App from './App.jsx'
 import Home from './pages/home/Home.jsx';
 import Shop from './pages/shop/Shop.jsx';
-import ShoppingCart from './pages/cart/ShoppingCart.jsx';
 
 const router = createBrowserRouter([
   {
@@ -14,11 +13,8 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: 'shop', element: <Shop /> },
-      { path: 'cart', element: <ShoppingCart /> }
     ],
   },
-  //OUTLETS HERE from (app?????)
-  //DEFAULT OUTLET is home
 ]);
 
 createRoot(document.getElementById('root')).render(

@@ -2,7 +2,6 @@ import './App.css'
 import NavBar from './components/navbar/NavBar'
 import { Outlet } from 'react-router-dom'
 import { useState } from 'react';
-import ShoppingCart from './pages/cart/ShoppingCart';
 import Sidebar from './pages/sidebar/Sidebar';
 
 function App() {
@@ -16,7 +15,7 @@ function App() {
 
   return (
     <>
-      <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+      <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} cart={cart} />
       <NavBar cart={cart} isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} toggleSidebar={toggleSidebar} />
       <Outlet context={[cart, setCart]} />
     </>
