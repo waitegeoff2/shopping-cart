@@ -1,10 +1,9 @@
 import { useState } from "react"
 import './Card.css'
-//MAKE EACH CARD HERE????
-//so that you are making new handleFunctions for EACH CARD, 
-//in the current way, you are mapping them all but they all share the same states
 
 export default function Card({ product, cart, setCart }) {
+    //each card will create it's own functions and states
+    //similar to class in vanilla js
     
     const [productNum, setProductNum] = useState(1);
 

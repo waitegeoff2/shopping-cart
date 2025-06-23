@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Sidebar from './pages/sidebar/Sidebar';
 
 function App() {
-  //CART STATE NEEDS TO BE HERE (needs to be read by the navbar and stay across changes)
+  //storing cart state here so entire app can access
   const [cart, setCart] = useState([]);
   const[isSidebarOpen, setIsSidebarOpen] = useState(false);
 
