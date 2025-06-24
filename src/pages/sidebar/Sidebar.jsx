@@ -3,7 +3,6 @@ import './Sidebar.css'
 export default function Sidebar({isOpen, toggleSidebar, cart, setCart}) {
 
     const totalPrice = cart.reduce((total, product)=> total + product.price, 0)
-    console.log(totalPrice)
     
     function handleDeleteItem(index) {
         //delete item from cart state at that index
