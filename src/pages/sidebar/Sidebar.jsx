@@ -2,6 +2,9 @@ import './Sidebar.css'
 
 export default function Sidebar({isOpen, toggleSidebar, cart, setCart}) {
 
+    const totalPrice = cart.reduce((total, product)=> total + product.price, 0)
+    console.log(totalPrice)
+    
     function handleDeleteItem(index) {
         //delete item from cart state at that index
         const newCartArr = [...cart]
@@ -19,11 +22,12 @@ export default function Sidebar({isOpen, toggleSidebar, cart, setCart}) {
                 <ul className="cartList">
                     {cart.map((cartItem, index) =>(
                         <div className='cart-list'>
-                            <li>{cartItem.title}</li>
+                            <li>{cartItem.title}: ${cartItem.price}</li>
                             <button onClick={()=>handleDeleteItem(index)} className='delete-btn'>X</button>
                         </div>
                     ))}
                 </ul>
+                <h2>Your total: ${totalPrice}</h2>
             </div>
         </div>
         
